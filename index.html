@@ -3,17 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privatlivspolitik & Vilkår - TeoriTjek</title>
+    <title>TeoriTjek - Din vej til kørekortet</title>
     <style>
       body {
         font-family: Arial, sans-serif;
-        margin: 2rem;
+        margin: 0;
+        padding: 0;
         line-height: 1.6;
         background-color: #f9f9f9;
         color: #333;
       }
-      h1,
-      h2 {
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      h1, h2 {
         color: #222;
       }
       a {
@@ -23,152 +28,97 @@
       a:hover {
         text-decoration: underline;
       }
-      hr {
-        margin: 2rem 0;
+      .hero {
+        text-align: center;
+        padding: 4rem 0;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      .hero p {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 2rem;
+      }
+      .cta-button {
+        display: inline-block;
+        background-color: #0066cc;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 4px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .cta-button:hover {
+        background-color: #0052a3;
+        text-decoration: none;
+      }
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+      .feature {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .feature h3 {
+        color: #0066cc;
+        margin-bottom: 1rem;
+      }
+      .footer {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid #ddd;
+        text-align: center;
+      }
+      .footer-links {
+        margin-bottom: 1rem;
+      }
+      .footer-links a {
+        margin: 0 1rem;
       }
     </style>
   </head>
   <body>
-    <!-- Dansk version -->
-    <h1>Privatlivspolitik og Vilkår for TeoriTjek</h1>
-    <p><strong>Sidst opdateret:</strong> 01/04/2025</p>
+    <div class="container">
+      <div class="hero">
+        <h1>TeoriTjek</h1>
+        <p>Din vej til kørekortet - øv dig med vores gratis teoriprøver</p>
+        <a href="#download" class="cta-button">Download appen</a>
+      </div>
 
-    <h2>1. Introduktion</h2>
-    <p>
-      TeoriTjek prioriterer dit privatliv højt. Denne politik beskriver vores
-      behandling af data og betingelser for brug af appen.
-    </p>
+      <div class="features">
+        <div class="feature">
+          <h3>Gratis teoriprøver</h3>
+          <p>Øv dig med hundredvis af spørgsmål der ligner den rigtige teoriprøve.</p>
+        </div>
+        <div class="feature">
+          <h3>Altid opdateret</h3>
+          <p>Vores spørgsmål følger de nyeste regler og krav fra kørekortsundervisningen.</p>
+        </div>
+        <div class="feature">
+          <h3>Spor din fremgang</h3>
+          <p>Se dine resultater og følg din udvikling mod den perfekte teoriprøve.</p>
+        </div>
+      </div>
 
-    <h2>2. Dataindsamling</h2>
-    <ul>
-      <li>
-        <strong>Ingen personlige data:</strong> TeoriTjek kræver hverken login
-        eller registrering.
-      </li>
-      <li>
-        <strong>Annoncering:</strong> Appodeal SDK leverer annoncer og kan
-        opsamle anonymiseret enhedsdata i overensstemmelse med deres
-        privatlivspolitik.
-      </li>
-    </ul>
-
-    <h2>3. Formål med dataindsamling</h2>
-    <ul>
-      <li>Gratis app‑brug via annoncefinansiering.</li>
-      <li>
-        Generel forbedring af brugeroplevelsen baseret på anonym statistik.
-      </li>
-    </ul>
-
-    <h2>4. Deling af data</h2>
-    <p>
-      TeoriTjek deler eller opbevarer ikke personlige data. Appodeal håndterer
-      anonymiseret data i henhold til deres privatlivspolitik.
-    </p>
-
-    <h2>5. Immaterielle rettigheder</h2>
-    <p>
-      Alt indhold i TeoriTjek, inkl. tekst, billeder, logoer og spørgsmål,
-      tilhører TeoriTjek og er beskyttet af ophavsretsloven. Indhold må ikke
-      kopieres, distribueres eller genbruges uden udtrykkeligt samtykke.
-    </p>
-
-    <h2>6. Ansvarsbegrænsning</h2>
-    <p>
-      TeoriTjek leveres "som det er", uden garanti for fejl eller mangler. Vi er
-      ikke ansvarlige for direkte eller indirekte tab i forbindelse med brugen
-      af appen.
-    </p>
-
-    <h2>7. Brugerens rettigheder</h2>
-    <p>
-      Brugeren kan til enhver tid afinstallere appen, hvorved dataindsamling
-      ophører.
-    </p>
-
-    <h2>8. Ændringer</h2>
-    <p>
-      Vi forbeholder os retten til løbende at opdatere denne politik og vilkår.
-      Ændringer offentliggøres her.
-    </p>
-
-    <h2>9. Kontakt</h2>
-    <p>
-      Kontakt os på:
-      <a href="mailto:support@teoritjek.dk">support@teoritjek.dk</a>
-    </p>
-
-    <hr />
-
-    <!-- English version -->
-    <h1>Privacy Policy & Terms for TeoriTjek</h1>
-    <p><strong>Last Updated:</strong> April 1, 2025</p>
-
-    <h2>1. Introduction</h2>
-    <p>
-      TeoriTjek values your privacy. This document explains our data handling
-      practices and terms of use.
-    </p>
-
-    <h2>2. Data Collection</h2>
-    <ul>
-      <li>
-        <strong>No personal data:</strong> TeoriTjek does not require login or
-        registration.
-      </li>
-      <li>
-        <strong>Advertisements:</strong> Ads are provided by the Appodeal SDK,
-        which may collect anonymized device data according to its privacy
-        policy.
-      </li>
-    </ul>
-
-    <h2>3. Purpose of Data Collection</h2>
-    <ul>
-      <li>To offer a free app through ad funding.</li>
-      <li>
-        General improvement of user experience based on anonymous statistics.
-      </li>
-    </ul>
-
-    <h2>4. Data Sharing</h2>
-    <p>
-      TeoriTjek neither stores nor shares personal data. Appodeal processes
-      anonymized data in accordance with its privacy policy.
-    </p>
-
-    <h2>5. Intellectual Property Rights</h2>
-    <p>
-      All content within TeoriTjek, including text, images, logos, and quiz
-      content, is owned by TeoriTjek and protected by copyright law. Content
-      must not be copied, distributed, or reused without explicit consent.
-    </p>
-
-    <h2>6. Limitation of Liability</h2>
-    <p>
-      TeoriTjek is provided "as is", without warranties. We shall not be liable
-      for any direct or indirect damages arising from the use of the app.
-    </p>
-
-    <h2>7. User Rights</h2>
-    <p>
-      Users may uninstall the app at any time, thus stopping data collection.
-    </p>
-
-    <h2>8. Changes</h2>
-    <p>
-      We reserve the right to update this policy and terms periodically. Updates
-      will be posted here.
-    </p>
-
-    <h2>9. Contact</h2>
-    <p>
-      Contact us at:
-      <a href="mailto:support@teoritjek.dk">support@teoritjek.dk</a>
-    </p>
-
-    <hr />
-
-    <p>© 2025 TeoriTjek. Alle rettigheder forbeholdes. All rights reserved.</p>
+      <div class="footer">
+        <div class="footer-links">
+          <a href="/privatlivspolitik.html">Privatlivspolitik</a>
+          <a href="/handelsbetingelser.html">Handelsbetingelser</a>
+          <a href="mailto:support@teoritjek.dk">Kontakt</a>
+        </div>
+        <p>© 2025 TeoriTjek. Alle rettigheder forbeholdes.</p>
+      </div>
+    </div>
   </body>
 </html>
