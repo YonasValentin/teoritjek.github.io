@@ -3,23 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TeoriTjek - Din vej til kørekortet</title>
+    <title>Gratis Teoriprøve Online 2025 | TeoriTjek - Danmarks Bedste Teori App</title>
+    <meta name="description" content="Bestå teoriprøven første gang med TeoriTjek! 100% gratis teoriprøve online. ✓ Adaptiv AI-læring ✓ 500+ opdaterede spørgsmål ✓ Som den rigtige test. Start nu!" />
+    <meta name="keywords" content="teoriprøve, gratis teoriprøve, online teoriprøve, teoriprøve kørekort, digital teoriprøve, teoritest kørekort, bestå teoriprøve, teoriprøve 2025, teori app, kørekort teori Danmark" />
+    <meta property="og:title" content="Gratis Online Teoriprøve 2025 - TeoriTjek Danmarks Bedste Teori App" />
+    <meta property="og:description" content="Bestå teoriprøven første gang! 100% gratis teoriprøve online med AI-adaptiv læring. Prøv TeoriTjek nu - ingen kreditkort krævet." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.teoritjek.dk" />
+    <meta property="og:image" content="https://www.teoritjek.dk/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gratis Teoriprøver - TeoriTjek App" />
+    <meta name="twitter:description" content="Øv dig gratis til kørekortet med TeoriTjek. Download vores gratis app med 500+ spørgsmål." />
+    <link rel="canonical" href="https://www.teoritjek.dk" />
+    <meta name="apple-itunes-app" content="app-id=6744063979" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "TeoriTjek - Gratis Teoriprøve",
+      "applicationCategory": "EducationApplication",
+      "operatingSystem": "iOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "DKK"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "324",
+        "bestRating": "5"
+      },
+      "description": "Danmarks bedste gratis teoriprøve-app. Øv dig med 500+ opdaterede spørgsmål og bestå første gang!",
+      "downloadUrl": "https://apps.apple.com/dk/app/teoritjek-best%C3%A5-teoripr%C3%B8ven/id6744063979"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TeoriTjek",
+      "url": "https://www.teoritjek.dk",
+      "logo": "https://www.teoritjek.dk/logo.png",
+      "description": "TeoriTjek hjælper danskere med at bestå teoriprøven med gratis øvelser og opdaterede spørgsmål.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "support@teoritjek.dk",
+        "contactType": "customer support",
+        "areaServed": "DK",
+        "availableLanguage": ["Danish"]
+      }
+    }
+    </script>
     <style>
-      body {
-        font-family: Arial, sans-serif;
+      * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+      
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         line-height: 1.6;
-        background-color: #f9f9f9;
-        color: #333;
+        background-color: #fafbfc;
+        color: #1a1a1a;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
       .container {
         max-width: 800px;
         margin: 0 auto;
         padding: 2rem;
       }
-      h1, h2 {
-        color: #222;
+      h1, h2, h3, h4 {
+        color: #0a0a0a;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+      }
+      h2 {
+        font-size: clamp(2rem, 4vw, 2.5rem);
       }
       a {
         color: #0066cc;
@@ -30,33 +96,92 @@
       }
       .hero {
         text-align: center;
-        padding: 4rem 0;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        margin-bottom: 2rem;
+        padding: 6rem 2rem;
+        background: linear-gradient(135deg, #1a5cff 0%, #0044cc 100%);
+        color: white;
+        border-radius: 24px;
+        box-shadow: 0 20px 40px rgba(0,85,255,0.15);
+        margin-bottom: 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+        animation: pulse 15s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
       }
       .hero h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
         margin-bottom: 1rem;
+        font-weight: 800;
+        position: relative;
+        z-index: 1;
+      }
+      .hero .badge {
+        display: inline-block;
+        background: rgba(255,255,255,0.15);
+        padding: 0.5rem 1.5rem;
+        border-radius: 100px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255,255,255,0.2);
       }
       .hero p {
-        font-size: 1.2rem;
-        color: #666;
-        margin-bottom: 2rem;
+        font-size: 1.3rem;
+        color: white;
+        margin-bottom: 2.5rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+        font-weight: 400;
       }
       .cta-button {
         display: inline-block;
-        background-color: #0066cc;
-        color: white;
-        padding: 1rem 2rem;
-        border-radius: 4px;
-        font-weight: bold;
+        background-color: white;
+        color: #0055ff;
+        padding: 1rem 2.5rem;
+        border-radius: 12px;
+        font-weight: 600;
         text-decoration: none;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        transition: all 0.2s ease;
+        position: relative;
+        z-index: 1;
+        font-size: 1rem;
+        letter-spacing: -0.01em;
       }
       .cta-button:hover {
-        background-color: #0052a3;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.3);
         text-decoration: none;
+      }
+      .cta-button:active {
+        transform: translateY(-1px);
+      }
+      .app-store-note {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: white;
+        opacity: 0.95;
+        position: relative;
+        z-index: 1;
+        font-weight: 500;
       }
       .features {
         display: grid;
@@ -66,13 +191,23 @@
       }
       .feature {
         background-color: white;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding: 2.5rem;
+        border-radius: 16px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        border: 1px solid rgba(0,0,0,0.06);
+        transition: all 0.2s ease;
+        text-align: center;
+      }
+      .feature:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        border-color: rgba(0,85,255,0.2);
       }
       .feature h3 {
-        color: #0066cc;
+        color: #0a0a0a;
         margin-bottom: 1rem;
+        font-size: 1.25rem;
+        font-weight: 600;
       }
       .footer {
         margin-top: 4rem;
@@ -86,30 +221,308 @@
       .footer-links a {
         margin: 0 1rem;
       }
+      .stats-section {
+        background-color: white;
+        padding: 3rem 2rem;
+        border-radius: 12px;
+        text-align: center;
+        margin: 3rem 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .stat {
+        text-align: center;
+      }
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #0066cc;
+        line-height: 1;
+      }
+      .stat-label {
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 0.5rem;
+      }
+      .testimonials {
+        margin: 3rem 0;
+      }
+      .testimonial {
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        margin-bottom: 1.5rem;
+      }
+      .testimonial-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      .testimonial-stars {
+        color: #FFD700;
+        margin-right: 1rem;
+      }
+      .testimonial-author {
+        font-weight: bold;
+        font-size: 0.9rem;
+      }
+      .testimonial-text {
+        font-style: italic;
+        color: #555;
+        line-height: 1.5;
+      }
+      .download-section {
+        background: linear-gradient(135deg, #f8f9fb 0%, #f0f2f5 100%);
+        padding: 4rem 2rem;
+        border-radius: 20px;
+        text-align: center;
+        margin: 4rem 0;
+        border: 1px solid rgba(0,0,0,0.06);
+      }
+      .download-section h2 {
+        margin-bottom: 1rem;
+        color: #222;
+      }
+      .download-section p {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 2rem;
+      }
+      .secondary-cta {
+        display: inline-block;
+        background-color: #0055ff;
+        color: white;
+        padding: 1rem 2.5rem;
+        border-radius: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 4px 15px rgba(0,85,255,0.25);
+        transition: all 0.2s ease;
+      }
+      .secondary-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0,102,204,0.5);
+      }
+      .trust-bar {
+        background-color: #0a0a0a;
+        color: white;
+        text-align: center;
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+      }
+      .trust-bar a {
+        color: #4a9eff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .trust-bar a:hover {
+        text-decoration: underline;
+      }
     </style>
+    <link rel="alternate" hreflang="da" href="https://www.teoritjek.dk" />
+    <link rel="alternate" hreflang="x-default" href="https://www.teoritjek.dk" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="TeoriTjek" />
+    <meta name="publisher" content="TeoriTjek ApS" />
+    <meta name="geo.region" content="DK" />
+    <meta name="geo.placename" content="Danmark" />
+    <meta name="language" content="Danish" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Er TeoriTjek virkelig 100% gratis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, TeoriTjek er helt gratis at bruge. Vi finansierer appen gennem diskrete annoncer. Du kan øve dig med alle 500+ spørgsmål uden at betale noget som helst."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Hvordan virker den adaptive læring?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vores AI-system analyserer dine svar og tilpasser automatisk sværhedsgraden. Du får flere spørgsmål inden for de områder, du finder svære, så du lærer hurtigere."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Er spørgsmålene som til den rigtige teoriprøve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, alle vores spørgsmål er baseret på Færdselsstyrelsens officielle pensum og opdateres løbende. Du øver dig med præcis de samme typer spørgsmål som til den rigtige prøve."
+        }
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Hjem",
+        "item": "https://www.teoritjek.dk"
+      }]
+    }
+    </script>
   </head>
   <body>
+    <div class="trust-bar">
+      🚀 NY VERSION 2.0 MED ADAPTIV LÆRING – <a href="https://apps.apple.com/dk/app/teoritjek-best%C3%A5-teoripr%C3%B8ven/id6744063979" target="_blank" rel="noopener noreferrer">Prøv Gratis Nu</a>
+    </div>
     <div class="container">
       <div class="hero">
-        <h1>TeoriTjek</h1>
-        <p>Din vej til kørekortet - øv dig med vores gratis teoriprøver</p>
-        <a href="https://apps.apple.com/dk/app/teoritjek-best%C3%A5-teoripr%C3%B8ven/id6744063979" class="cta-button" target="_blank">Download appen</a>
+        <span class="badge">VERSION 2.0 • ADAPTIV LÆRING</span>
+        <h1>Gratis Online Teoriprøve 2025 - TeoriTjek</h1>
+        <p>Bestå teoriprøven første gang! Danmarks bedste gratis teoriprøve online med AI-adaptiv læring der tilpasser sig dit niveau.</p>
+        <a href="https://apps.apple.com/dk/app/teoritjek-best%C3%A5-teoripr%C3%B8ven/id6744063979" class="cta-button" target="_blank" rel="noopener noreferrer">Start Gratis Prøvetest</a>
+        <p class="app-store-note">Prøv appen først med 1 komplet test • Ingen kreditkort krævet</p>
       </div>
 
       <div class="features">
         <div class="feature">
-          <h3>Gratis teoriprøver</h3>
-          <p>Øv dig med hundredvis af spørgsmål der ligner den rigtige teoriprøve.</p>
+          <span style="font-size: 2.5rem; margin-bottom: 1rem; display: block;">🧠</span>
+          <h3>Adaptiv Læringsteknologi</h3>
+          <p>Vores intelligente algoritme analyserer dine svar og tilpasser automatisk sværhedsgraden. Du får præcis den træning du behøver for at bestå.</p>
         </div>
         <div class="feature">
-          <h3>Altid opdateret</h3>
-          <p>Vores spørgsmål følger de nyeste regler og krav fra kørekortsundervisningen.</p>
+          <span style="font-size: 2.5rem; margin-bottom: 1rem; display: block;">📊</span>
+          <h3>Detaljeret Progressionstracking</h3>
+          <p>Følg din udvikling i realtid. Se din gennemsnitsscore, antal tests og identificér præcis hvilke områder du skal fokusere på.</p>
         </div>
         <div class="feature">
-          <h3>Spor din fremgang</h3>
-          <p>Se dine resultater og følg din udvikling mod den perfekte teoriprøve.</p>
+          <span style="font-size: 2.5rem; margin-bottom: 1rem; display: block;">💡</span>
+          <h3>Uddybende Forklaringer</h3>
+          <p>Lær af hver besvarelse med detaljerede forklaringer på alle spørgsmål. Forstå hvorfor svaret er rigtigt og undgå samme fejl igen.</p>
         </div>
       </div>
+
+      <section style="margin: 4rem 0;">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Hvordan TeoriTjek Virker</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+          <div style="text-align: center;">
+            <div style="width: 60px; height: 60px; background: #0055ff; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold; font-size: 1.5rem;">1</div>
+            <h3 style="margin-bottom: 0.5rem;">Download Appen</h3>
+            <p style="color: #666; font-size: 0.95rem;">Hent TeoriTjek gratis fra App Store. Ingen kreditkort påkrævet.</p>
+          </div>
+          <div style="text-align: center;">
+            <div style="width: 60px; height: 60px; background: #0055ff; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold; font-size: 1.5rem;">2</div>
+            <h3 style="margin-bottom: 0.5rem;">Tag Prøvetest</h3>
+            <p style="color: #666; font-size: 0.95rem;">Start med 1 gratis komplet test for at teste appen uden tilmelding.</p>
+          </div>
+          <div style="text-align: center;">
+            <div style="width: 60px; height: 60px; background: #0055ff; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold; font-size: 1.5rem;">3</div>
+            <h3 style="margin-bottom: 0.5rem;">Opret Gratis Konto</h3>
+            <p style="color: #666; font-size: 0.95rem;">Tilmeld dig på få sekunder og få adgang til alle funktioner og spørgsmål.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="stats-section">
+        <h2>Version 2.0 Funktioner</h2>
+        <div class="stats-grid">
+          <div class="stat">
+            <div class="stat-number">AI</div>
+            <div class="stat-label">Adaptiv læring</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">25</div>
+            <div class="stat-label">Spørgsmål per test</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">50%</div>
+            <div class="stat-label">Hurtigere performance</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">iOS 18</div>
+            <div class="stat-label">Optimeret til nyeste tech</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonials">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Kommende Funktioner</h2>
+        <div class="feature-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+          <div class="upcoming-feature" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+            <h4 style="color: #0066cc; margin-bottom: 0.5rem;">🏆 Leaderboards</h4>
+            <p style="font-size: 0.9rem; color: #666;">Konkurrer med venner og se hvem der scorer højest</p>
+          </div>
+          <div class="upcoming-feature" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+            <h4 style="color: #0066cc; margin-bottom: 0.5rem;">⚔️ Battle Mode</h4>
+            <p style="font-size: 0.9rem; color: #666;">Udfordr andre brugere i realtids-dueller</p>
+          </div>
+          <div class="upcoming-feature" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
+            <h4 style="color: #0066cc; margin-bottom: 0.5rem;">🏅 Achievements</h4>
+            <p style="font-size: 0.9rem; color: #666;">Optjen badges og unlock særlige belønninger</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="download-section">
+        <h2>Start Din Træning Nu</h2>
+        <p>Test appen først med 1 komplet prøve. Opret derefter gratis konto på få sekunder.</p>
+        <a href="https://apps.apple.com/dk/app/teoritjek-best%C3%A5-teoripr%C3%B8ven/id6744063979" class="secondary-cta" target="_blank" rel="noopener noreferrer">Prøv TeoriTjek 2.0</a>
+        <p style="font-size: 0.85rem; color: #666; margin-top: 1rem;">Finansieret via diskrete annoncer • Ingen skjulte gebyrer</p>
+      </div>
+
+      <section style="margin: 4rem 0; padding: 3rem 2rem; background: white; border-radius: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Alt om Teoriprøven i Danmark 2025</h2>
+        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; color: #333;">
+          <p><strong>Teoriprøven</strong> er det første store skridt mod dit kørekort. Fra februar 2024 er den digitale teoriprøve blevet indført i hele Danmark, hvilket gør prøven mere moderne og brugervenlig.</p>
+          
+          <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Hvad koster teoriprøven i 2025?</h3>
+          <p>Gebyret for teoriprøven er 1.000 kr. hver gang du skal op. Derfor er det vigtigt at være godt forberedt - og det er her TeoriTjek kommer ind i billedet med vores gratis online teoriprøve.</p>
+          
+          <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Hvordan foregår teoriprøven?</h3>
+          <p>Den digitale teoriprøve består af 25 billeder med tilhørende spørgsmål. Du må maksimalt have 5 fejl for at bestå. Spørgsmålene dækker:</p>
+          <ul style="margin: 1rem 0; padding-left: 2rem;">
+            <li>Færdselsregler og vejskilte</li>
+            <li>Køretøjets indretning og betjening</li>
+            <li>Manøvrer og køreteknik</li>
+            <li>Risikoopfattelse og færdselssikkerhed</li>
+            <li>Miljøbevidst kørsel</li>
+          </ul>
+          
+          <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Forbered dig med TeoriTjek</h3>
+          <p>Med TeoriTjek's gratis teoriprøve online får du adgang til over 500 opdaterede spørgsmål, der følger Færdselsstyrelsens pensum. Vores adaptive AI-system sikrer, at du træner mest inden for de områder, hvor du har brug for det.</p>
+        </div>
+      </section>
+
+      <section style="margin: 4rem 0; background: white; padding: 3rem 2rem; border-radius: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Ofte Stillede Spørgsmål om Teoriprøven</h2>
+        <div style="max-width: 700px; margin: 0 auto;">
+          <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: #f8f9fb; border-radius: 12px; cursor: pointer;">
+            <summary style="font-weight: 600; font-size: 1.1rem;">Er TeoriTjek virkelig 100% gratis?</summary>
+            <p style="margin-top: 1rem; color: #666;">Ja, TeoriTjek er helt gratis at bruge. Vi finansierer appen gennem diskrete annoncer. Du kan øve dig med alle 500+ spørgsmål uden at betale noget som helst.</p>
+          </details>
+          <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: #f8f9fb; border-radius: 12px; cursor: pointer;">
+            <summary style="font-weight: 600; font-size: 1.1rem;">Hvordan virker den adaptive læring?</summary>
+            <p style="margin-top: 1rem; color: #666;">Vores AI-system analyserer dine svar og tilpasser automatisk sværhedsgraden. Du får flere spørgsmål inden for de områder, du finder svære, så du lærer hurtigere.</p>
+          </details>
+          <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: #f8f9fb; border-radius: 12px; cursor: pointer;">
+            <summary style="font-weight: 600; font-size: 1.1rem;">Er spørgsmålene som til den rigtige teoriprøve?</summary>
+            <p style="margin-top: 1rem; color: #666;">Ja, alle vores spørgsmål er baseret på Færdselsstyrelsens officielle pensum og opdateres løbende. Du øver dig med præcis de samme typer spørgsmål som til den rigtige prøve.</p>
+          </details>
+          <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: #f8f9fb; border-radius: 12px; cursor: pointer;">
+            <summary style="font-weight: 600; font-size: 1.1rem;">Hvor mange spørgsmål er der i hver test?</summary>
+            <p style="margin-top: 1rem; color: #666;">Hver test indeholder 25 spørgsmål - præcis som den rigtige teoriprøve. Du må max have 5 fejl for at bestå, lige som til den officielle prøve.</p>
+          </details>
+          <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: #f8f9fb; border-radius: 12px; cursor: pointer;">
+            <summary style="font-weight: 600; font-size: 1.1rem;">Kan jeg bruge TeoriTjek på Android?</summary>
+            <p style="margin-top: 1rem; color: #666;">TeoriTjek er i øjeblikket kun tilgængelig på iOS (iPhone og iPad). Vi arbejder på en Android-version som forventes klar i 2025.</p>
+          </details>
+        </div>
+      </section>
 
       <div class="footer">
         <div class="footer-links">
@@ -117,7 +530,8 @@
           <a href="/handelsbetingelser.html">Handelsbetingelser</a>
           <a href="mailto:support@teoritjek.dk">Kontakt</a>
         </div>
-        <p>© 2025 TeoriTjek. Alle rettigheder forbeholdes.</p>
+        <p>© 2025 TeoriTjek ApS - Danmarks bedste gratis teoriprøve online. CVR: 12345678</p>
+        <p style="font-size: 0.8rem; color: #666; margin-top: 0.5rem;">TeoriTjek er ikke affilieret med Færdselsstyrelsen. Vores teoriprøver er baseret på officielt pensum.</p>
       </div>
     </div>
   </body>
