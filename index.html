@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gratis Teoriprøve Online 2025 | TeoriTjek - Danmarks Bedste Teori App</title>
-    <meta name="description" content="Bestå teoriprøven første gang med TeoriTjek! 100% gratis teoriprøve online. ✓ Adaptiv AI-læring ✓ 500+ opdaterede spørgsmål ✓ Som den rigtige test. Start nu!" />
+    <meta name="description" content="Bestå teoriprøven første gang med TeoriTjek! 100% gratis teoriprøve online. ✓ Adaptiv AI-læring ✓ 500+ opdaterede spørgsmål ✓ Venner & Leaderboards ✓ Som den rigtige test. Start nu!" />
     <meta name="keywords" content="teoriprøve, gratis teoriprøve, online teoriprøve, teoriprøve kørekort, digital teoriprøve, teoritest kørekort, bestå teoriprøve, teoriprøve 2025, teori app, kørekort teori Danmark" />
     <meta property="og:title" content="Gratis Online Teoriprøve 2025 - TeoriTjek Danmarks Bedste Teori App" />
     <meta property="og:description" content="Bestå teoriprøven første gang! 100% gratis teoriprøve online med AI-adaptiv læring. Prøv TeoriTjek nu - ingen kreditkort krævet." />
@@ -67,289 +67,941 @@
         padding: 0;
         box-sizing: border-box;
       }
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+      
+      :root {
+        /* App-inspired color palette */
+        --primary: #3b82f6;
+        --primary-dark: #2563eb;
+        --primary-light: #60a5fa;
+        --secondary: #10b981;
+        --accent: #8b5cf6;
+        --warning: #f59e0b;
+        --danger: #ef4444;
+        --gray-50: #f9fafb;
+        --gray-100: #f3f4f6;
+        --gray-200: #e5e7eb;
+        --gray-300: #d1d5db;
+        --gray-400: #9ca3af;
+        --gray-500: #6b7280;
+        --gray-600: #4b5563;
+        --gray-700: #374151;
+        --gray-800: #1f2937;
+        --gray-900: #111827;
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
       
       body {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         line-height: 1.6;
-        background-color: #fafbfc;
-        color: #1a1a1a;
+        background-color: var(--gray-50);
+        color: var(--gray-900);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
+      
       .container {
-        max-width: 800px;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 2rem;
+        padding: 0 1.5rem;
       }
-      h1, h2, h3, h4 {
-        color: #0a0a0a;
-        font-weight: 700;
-        letter-spacing: -0.02em;
+      
+      /* Navigation */
+      nav {
+        background: white;
+        box-shadow: var(--shadow);
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        transition: all 0.3s ease;
       }
-      h1 {
-        font-size: clamp(2.5rem, 5vw, 3.5rem);
+      
+      nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
       }
-      h2 {
-        font-size: clamp(2rem, 4vw, 2.5rem);
+      
+      .logo {
+        font-weight: 800;
+        font-size: 1.5rem;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
-      a {
-        color: #0066cc;
+      
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+      
+      .nav-links a {
+        color: var(--gray-600);
+        font-weight: 500;
+        transition: color 0.2s;
         text-decoration: none;
       }
-      a:hover {
-        text-decoration: underline;
+      
+      .nav-links a:hover {
+        color: var(--primary);
       }
-      .hero {
-        text-align: center;
-        padding: 6rem 2rem;
-        background: linear-gradient(135deg, #1a5cff 0%, #0044cc 100%);
+      
+      .download-btn {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
         color: white;
-        border-radius: 24px;
-        box-shadow: 0 20px 40px rgba(0,85,255,0.15);
-        margin-bottom: 4rem;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.75rem;
+        font-weight: 600;
+        transition: all 0.2s;
+        box-shadow: var(--shadow-md);
+      }
+      
+      .download-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+        text-decoration: none;
+      }
+      
+      /* Hero Section */
+      .hero {
+        padding: 5rem 0;
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
         position: relative;
         overflow: hidden;
       }
+      
       .hero::before {
         content: '';
         position: absolute;
         top: -50%;
-        right: -50%;
-        width: 200%;
+        right: -30%;
+        width: 80%;
         height: 200%;
-        background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
-        animation: pulse 15s ease-in-out infinite;
+        background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+        animation: float 20s ease-in-out infinite;
       }
-      @keyframes pulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.1); }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
       }
-      .hero h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        font-weight: 800;
-        position: relative;
-        z-index: 1;
-      }
-      .hero .badge {
-        display: inline-block;
-        background: rgba(255,255,255,0.15);
-        padding: 0.5rem 1.5rem;
-        border-radius: 100px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        margin-bottom: 2rem;
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255,255,255,0.2);
-      }
-      .hero p {
-        font-size: 1.3rem;
-        color: white;
-        margin-bottom: 2.5rem;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
-        z-index: 1;
-        opacity: 1;
-        font-weight: 400;
-      }
-      .cta-button {
-        display: inline-block;
-        background-color: white;
-        color: #0055ff;
-        padding: 1rem 2.5rem;
-        border-radius: 12px;
-        font-weight: 600;
-        text-decoration: none;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        transition: all 0.2s ease;
-        position: relative;
-        z-index: 1;
-        font-size: 1rem;
-        letter-spacing: -0.01em;
-      }
-      .cta-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-        text-decoration: none;
-      }
-      .cta-button:active {
-        transform: translateY(-1px);
-      }
-      .app-store-note {
-        margin-top: 1rem;
-        font-size: 0.9rem;
-        color: white;
-        opacity: 0.95;
-        position: relative;
-        z-index: 1;
-        font-weight: 500;
-      }
-      .features {
+      
+      .hero-content {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin: 3rem 0;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        position: relative;
+        z-index: 1;
       }
-      .feature {
-        background-color: white;
-        padding: 2.5rem;
-        border-radius: 16px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-        border: 1px solid rgba(0,0,0,0.06);
-        transition: all 0.2s ease;
-        text-align: center;
-      }
-      .feature:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        border-color: rgba(0,85,255,0.2);
-      }
-      .feature h3 {
-        color: #0a0a0a;
-        margin-bottom: 1rem;
-        font-size: 1.25rem;
-        font-weight: 600;
-      }
-      .footer {
-        margin-top: 4rem;
-        padding-top: 2rem;
-        border-top: 1px solid #ddd;
-        text-align: center;
-      }
-      .footer-links {
-        margin-bottom: 1rem;
-      }
-      .footer-links a {
-        margin: 0 1rem;
-        font-weight: 500;
-      }
-      @media (max-width: 768px) {
-        nav .container > div:last-child {
-          display: none;
-        }
-        nav .container {
-          justify-content: center !important;
-        }
-      }
-      .stats-section {
-        background-color: white;
-        padding: 3rem 2rem;
-        border-radius: 12px;
-        text-align: center;
-        margin: 3rem 0;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      }
-      .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-      .stat {
-        text-align: center;
-      }
-      .stat-number {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #0066cc;
-        line-height: 1;
-      }
-      .stat-label {
-        font-size: 0.9rem;
-        color: #666;
-        margin-top: 0.5rem;
-      }
-      .testimonials {
-        margin: 3rem 0;
-      }
-      .testimonial {
-        background-color: white;
-        padding: 1.5rem;
-        border-radius: 12px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      
+      .hero-text h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 900;
+        line-height: 1.1;
         margin-bottom: 1.5rem;
+        color: var(--gray-900);
       }
-      .testimonial-header {
+      
+      .hero-text .gradient-text {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      .hero-text p {
+        font-size: 1.25rem;
+        color: var(--gray-600);
+        margin-bottom: 2rem;
+        line-height: 1.8;
+      }
+      
+      .hero-features {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+      
+      .hero-feature {
         display: flex;
         align-items: center;
-        margin-bottom: 1rem;
+        gap: 0.5rem;
+        font-weight: 500;
+        color: var(--gray-700);
       }
-      .testimonial-stars {
-        color: #FFD700;
-        margin-right: 1rem;
+      
+      .hero-feature svg {
+        width: 20px;
+        height: 20px;
+        color: var(--secondary);
       }
-      .testimonial-author {
-        font-weight: bold;
-        font-size: 0.9rem;
+      
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
       }
-      .testimonial-text {
-        font-style: italic;
-        color: #555;
-        line-height: 1.5;
-      }
-      .download-section {
-        background: linear-gradient(135deg, #f8f9fb 0%, #f0f2f5 100%);
-        padding: 4rem 2rem;
-        border-radius: 20px;
-        text-align: center;
-        margin: 4rem 0;
-        border: 1px solid rgba(0,0,0,0.06);
-      }
-      .download-section h2 {
-        margin-bottom: 1rem;
-        color: #222;
-      }
-      .download-section p {
+      
+      .primary-cta {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        font-weight: 600;
         font-size: 1.1rem;
-        color: #555;
+        box-shadow: var(--shadow-lg);
+        transition: all 0.2s;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      
+      .primary-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-xl);
+        text-decoration: none;
+      }
+      
+      .secondary-cta {
+        background: white;
+        color: var(--primary);
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        box-shadow: var(--shadow-md);
+        transition: all 0.2s;
+        text-decoration: none;
+        border: 2px solid var(--gray-200);
+      }
+      
+      .secondary-cta:hover {
+        border-color: var(--primary-light);
+        box-shadow: var(--shadow-lg);
+        text-decoration: none;
+      }
+      
+      .hero-visual {
+        position: relative;
+      }
+      
+      .phone-mockup {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        position: relative;
+      }
+      
+      .phone-frame {
+        background: #1a1a1a;
+        border-radius: 3rem;
+        padding: 0.75rem;
+        box-shadow: var(--shadow-xl);
+        position: relative;
+      }
+      
+      .phone-screen {
+        background: white;
+        border-radius: 2.25rem;
+        overflow: hidden;
+        aspect-ratio: 9/19;
+        position: relative;
+      }
+      
+      .app-screenshot {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      /* Floating elements */
+      .floating-badge {
+        position: absolute;
+        background: white;
+        padding: 1rem 1.5rem;
+        border-radius: 1rem;
+        box-shadow: var(--shadow-lg);
+        animation: floatBadge 3s ease-in-out infinite;
+      }
+      
+      @keyframes floatBadge {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      .badge-friends {
+        top: 20%;
+        right: -2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      
+      .badge-score {
+        bottom: 20%;
+        left: -2rem;
+      }
+      
+      .badge-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+        border-radius: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+      }
+      
+      .badge-text {
+        text-align: left;
+      }
+      
+      .badge-label {
+        font-size: 0.75rem;
+        color: var(--gray-500);
+        font-weight: 500;
+      }
+      
+      .badge-value {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--gray-900);
+      }
+      
+      /* Features Section */
+      .features-section {
+        padding: 5rem 0;
+        background: white;
+      }
+      
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+      
+      .section-header h2 {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+        font-weight: 800;
+        margin-bottom: 1rem;
+        color: var(--gray-900);
+      }
+      
+      .section-header p {
+        font-size: 1.25rem;
+        color: var(--gray-600);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+      }
+      
+      .feature-card {
+        background: var(--gray-50);
+        padding: 2.5rem;
+        border-radius: 1.5rem;
+        border: 1px solid var(--gray-200);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .feature-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      
+      .feature-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--primary-light);
+      }
+      
+      .feature-card:hover::before {
+        transform: scaleX(1);
+      }
+      
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .feature-card h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--gray-900);
+      }
+      
+      .feature-card p {
+        color: var(--gray-600);
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+      
+      .feature-list {
+        list-style: none;
+      }
+      
+      .feature-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--gray-700);
+        margin-bottom: 0.5rem;
+      }
+      
+      .feature-list svg {
+        width: 16px;
+        height: 16px;
+        color: var(--secondary);
+        flex-shrink: 0;
+      }
+      
+      /* Social Features */
+      .social-section {
+        padding: 5rem 0;
+        background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+      }
+      
+      .social-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+      
+      .social-content h3 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        color: var(--gray-900);
+      }
+      
+      .social-features {
+        display: grid;
+        gap: 1.5rem;
+      }
+      
+      .social-feature {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: var(--shadow-md);
+        display: flex;
+        gap: 1rem;
+        align-items: start;
+      }
+      
+      .social-icon {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+        border-radius: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+      }
+      
+      .social-text h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        color: var(--gray-900);
+      }
+      
+      .social-text p {
+        color: var(--gray-600);
+        font-size: 0.95rem;
+      }
+      
+      /* Stats Section */
+      .stats-section {
+        padding: 3rem 0;
+        background: var(--gray-900);
+        color: white;
+      }
+      
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        text-align: center;
+      }
+      
+      .stat-item h3 {
+        font-size: 3rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.5rem;
+      }
+      
+      .stat-item p {
+        color: var(--gray-400);
+        font-weight: 500;
+      }
+      
+      /* How it works */
+      .how-section {
+        padding: 5rem 0;
+        background: white;
+      }
+      
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+        margin-top: 3rem;
+      }
+      
+      .step-card {
+        text-align: center;
+        position: relative;
+      }
+      
+      .step-number {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        box-shadow: var(--shadow-lg);
+      }
+      
+      .step-card h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--gray-900);
+      }
+      
+      .step-card p {
+        color: var(--gray-600);
+        line-height: 1.8;
+      }
+      
+      /* Success Stories */
+      .stories-section {
+        padding: 5rem 0;
+        background: var(--gray-50);
+      }
+      
+      .stories-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      
+      .story-card {
+        background: white;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        transition: all 0.3s ease;
+      }
+      
+      .story-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-xl);
+      }
+      
+      .story-image {
+        height: 200px;
+        background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .story-image .emoji {
+        font-size: 4rem;
+      }
+      
+      .story-content {
+        padding: 2rem;
+      }
+      
+      .story-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+      
+      .story-avatar {
+        width: 48px;
+        height: 48px;
+        background: var(--gray-200);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        color: var(--gray-600);
+      }
+      
+      .story-meta h4 {
+        font-weight: 600;
+        color: var(--gray-900);
+      }
+      
+      .story-meta p {
+        font-size: 0.875rem;
+        color: var(--gray-500);
+      }
+      
+      .story-text {
+        color: var(--gray-700);
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+      
+      .story-stats {
+        display: flex;
+        gap: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--gray-200);
+      }
+      
+      .story-stat {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--gray-600);
+        font-size: 0.875rem;
+      }
+      
+      /* Progress Visualization */
+      .progress-demo {
+        background: white;
+        padding: 3rem;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-lg);
+        margin: 3rem 0;
+      }
+      
+      .progress-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: 2rem;
       }
-      .secondary-cta {
-        display: inline-block;
-        background-color: #0055ff;
-        color: white;
-        padding: 1rem 2.5rem;
-        border-radius: 12px;
+      
+      .progress-header h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--gray-900);
+      }
+      
+      .progress-percentage {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--primary);
+      }
+      
+      .progress-bar {
+        height: 20px;
+        background: var(--gray-200);
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+      }
+      
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+        width: 78%;
+        position: relative;
+        animation: progressGrow 2s ease-out;
+      }
+      
+      @keyframes progressGrow {
+        from { width: 0; }
+      }
+      
+      .progress-categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+      }
+      
+      .category-progress {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background: var(--gray-50);
+        border-radius: 0.75rem;
+      }
+      
+      .category-name {
+        font-weight: 500;
+        color: var(--gray-700);
+      }
+      
+      .category-score {
         font-weight: 600;
-        text-decoration: none;
-        box-shadow: 0 4px 15px rgba(0,85,255,0.25);
-        transition: all 0.2s ease;
+        color: var(--primary);
       }
-      .secondary-cta:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(0,102,204,0.5);
-      }
-      .trust-bar {
-        background-color: #0a0a0a;
+      
+      /* CTA Section */
+      .cta-section {
+        padding: 5rem 0;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
         color: white;
         text-align: center;
-        padding: 0.75rem 1rem;
-        font-size: 0.85rem;
-        font-weight: 500;
-        letter-spacing: 0.02em;
       }
-      .trust-bar a {
-        color: #4a9eff;
-        text-decoration: none;
+      
+      .cta-section h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 800;
+        margin-bottom: 1rem;
+      }
+      
+      .cta-section p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+      
+      .cta-section .primary-cta {
+        background: white;
+        color: var(--primary);
+        font-size: 1.25rem;
+        padding: 1.25rem 2.5rem;
+      }
+      
+      .cta-section .primary-cta:hover {
+        background: var(--gray-50);
+      }
+      
+      /* FAQ Section */
+      .faq-section {
+        padding: 5rem 0;
+        background: white;
+      }
+      
+      .faq-grid {
+        display: grid;
+        gap: 1rem;
+        max-width: 800px;
+        margin: 3rem auto 0;
+      }
+      
+      .faq-item {
+        background: var(--gray-50);
+        border-radius: 1rem;
+        overflow: hidden;
+        border: 1px solid var(--gray-200);
+        transition: all 0.3s ease;
+      }
+      
+      .faq-item:hover {
+        border-color: var(--primary-light);
+      }
+      
+      .faq-question {
+        padding: 1.5rem;
         font-weight: 600;
+        color: var(--gray-900);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
-      .trust-bar a:hover {
-        text-decoration: underline;
+      
+      .faq-question::after {
+        content: '+';
+        font-size: 1.5rem;
+        color: var(--primary);
+        transition: transform 0.3s ease;
+      }
+      
+      .faq-item[open] .faq-question::after {
+        transform: rotate(45deg);
+      }
+      
+      .faq-answer {
+        padding: 0 1.5rem 1.5rem;
+        color: var(--gray-600);
+        line-height: 1.8;
+      }
+      
+      /* Footer */
+      footer {
+        background: var(--gray-900);
+        color: white;
+        padding: 3rem 0;
+      }
+      
+      .footer-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 3rem;
+        margin-bottom: 2rem;
+      }
+      
+      .footer-brand h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      .footer-brand p {
+        color: var(--gray-400);
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+      
+      .footer-social {
+        display: flex;
+        gap: 1rem;
+      }
+      
+      .social-link {
+        width: 40px;
+        height: 40px;
+        background: var(--gray-800);
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gray-400);
+        transition: all 0.3s ease;
+      }
+      
+      .social-link:hover {
+        background: var(--primary);
+        color: white;
+      }
+      
+      .footer-links h4 {
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+      
+      .footer-links ul {
+        list-style: none;
+      }
+      
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+      
+      .footer-links a {
+        color: var(--gray-400);
+        transition: color 0.3s ease;
+      }
+      
+      .footer-links a:hover {
+        color: var(--primary-light);
+      }
+      
+      .footer-bottom {
+        padding-top: 2rem;
+        border-top: 1px solid var(--gray-800);
+        text-align: center;
+        color: var(--gray-400);
+      }
+      
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        
+        .hero-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        
+        .hero-features {
+          justify-content: center;
+        }
+        
+        .cta-buttons {
+          justify-content: center;
+        }
+        
+        .phone-mockup {
+          margin-top: 3rem;
+        }
+        
+        .floating-badge {
+          display: none;
+        }
+        
+        .social-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .footer-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        
+        .footer-social {
+          justify-content: center;
+        }
+      }
+      
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .animate-fade-in {
+        animation: fadeIn 0.6s ease-out;
       }
     </style>
-    <link rel="alternate" hreflang="da" href="https://www.teoritjek.dk" />
-    <link rel="alternate" hreflang="x-default" href="https://www.teoritjek.dk" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <meta name="author" content="TeoriTjek" />
-    <meta name="publisher" content="TeoriTjek" />
-    <meta name="geo.region" content="DK" />
-    <meta name="geo.placename" content="Danmark" />
-    <meta name="language" content="Danish" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -375,6 +1027,20 @@
           "@type": "Answer",
           "text": "Ja, alle vores spørgsmål er baseret på Færdselsstyrelsens officielle pensum og opdateres løbende. Du øver dig med præcis de samme typer spørgsmål som til den rigtige prøve."
         }
+      }, {
+        "@type": "Question",
+        "name": "Kan jeg konkurrere med mine venner?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja! TeoriTjek har et komplet vennersystem hvor du kan tilføje venner via vennekoder, se venners fremskridt på leaderboards, og udfordre hinanden til battles."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Hvad er success stories?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Success stories er inspirerende historier fra brugere der har bestået deres teoriprøve. Du kan dele din egen historie med billeder og motivere andre til at bestå deres prøve."
+        }
       }]
     }
     </script>
@@ -390,180 +1056,603 @@
       }]
     }
     </script>
+    <link rel="alternate" hreflang="da" href="https://www.teoritjek.dk" />
+    <link rel="alternate" hreflang="x-default" href="https://www.teoritjek.dk" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="TeoriTjek" />
+    <meta name="publisher" content="TeoriTjek" />
+    <meta name="geo.region" content="DK" />
+    <meta name="geo.placename" content="Danmark" />
+    <meta name="language" content="Danish" />
   </head>
   <body>
-    <div class="trust-bar">
-      🚀 NY VERSION 2.0 MED ADAPTIV LÆRING – <a href="https://apps.apple.com/dk/app/teoritjek-best%C3%A5-teoripr%C3%B8ven/id6744063979" target="_blank" rel="noopener noreferrer">Prøv Gratis Nu</a>
-    </div>
-    <nav style="background: white; padding: 1rem 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-      <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-        <div style="font-weight: bold; font-size: 1.2rem; color: #0055ff;">TeoriTjek</div>
-        <div style="display: flex; gap: 2rem; align-items: center;">
-          <a href="/" style="color: #333; font-weight: 500;">Hjem</a>
-          <a href="/privatlivspolitik.html" style="color: #333; font-weight: 500;">Privatlivspolitik</a>
-          <a href="/handelsbetingelser.html" style="color: #333; font-weight: 500;">Vilkår</a>
-          <a href="https://apps.apple.com/dk/app/teoritjek-best%C3%A5-teoripr%C3%B8ven/id6744063979" target="_blank" rel="noopener noreferrer" style="background: #0055ff; color: white; padding: 0.5rem 1.5rem; border-radius: 8px; font-weight: 500;">Download App</a>
+    <!-- Navigation -->
+    <nav>
+      <div class="container">
+        <div class="logo">TeoriTjek</div>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#social">Venner</a>
+          <a href="#how">Sådan virker det</a>
+          <a href="#faq">FAQ</a>
+          <a href="https://apps.apple.com/dk/app/teoritjek-best%C3%A5-teoripr%C3%B8ven/id6744063979" class="download-btn" target="_blank" rel="noopener noreferrer">Download App</a>
         </div>
       </div>
     </nav>
-    <div class="container">
-      <div class="hero">
-        <span class="badge">VERSION 2.0 • ADAPTIV LÆRING</span>
-        <h1>Gratis Online Teoriprøve 2025 - TeoriTjek</h1>
-        <p>Bestå teoriprøven første gang! Danmarks bedste gratis teoriprøve online med AI-adaptiv læring der tilpasser sig dit niveau.</p>
-        <a href="https://apps.apple.com/dk/app/teoritjek-best%C3%A5-teoripr%C3%B8ven/id6744063979" class="cta-button" target="_blank" rel="noopener noreferrer">Start Gratis Prøvetest</a>
-        <p class="app-store-note">Prøv appen først med 1 komplet test • Ingen kreditkort krævet</p>
-        <p style="margin-top: 2rem; font-size: 0.9rem;">
-          <a href="/privatlivspolitik.html" style="color: white; text-decoration: underline;">Privatlivspolitik</a> • 
-          <a href="/handelsbetingelser.html" style="color: white; text-decoration: underline;">Handelsbetingelser</a>
-        </p>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text animate-fade-in">
+            <h1>Bestå teoriprøven med <span class="gradient-text">TeoriTjek</span></h1>
+            <p>Danmarks mest populære teoriprøve-app med adaptiv AI-læring, vennersystem og leaderboards. 100% gratis!</p>
+            
+            <div class="hero-features">
+              <div class="hero-feature">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                500+ opdaterede spørgsmål
+              </div>
+              <div class="hero-feature">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                AI-adaptiv læring
+              </div>
+              <div class="hero-feature">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Venner & leaderboards
+              </div>
+            </div>
+            
+            <div class="cta-buttons">
+              <a href="https://apps.apple.com/dk/app/teoritjek-best%C3%A5-teoripr%C3%B8ven/id6744063979" class="primary-cta" target="_blank" rel="noopener noreferrer">
+                Start gratis nu
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+              <a href="#how" class="secondary-cta">Se hvordan det virker</a>
+            </div>
+          </div>
+          
+          <div class="hero-visual">
+            <div class="phone-mockup">
+              <div class="phone-frame">
+                <div class="phone-screen">
+                  <div style="background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                    <div style="background: white; width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                      <span style="font-size: 3rem;">🚗</span>
+                    </div>
+                    <h3 style="color: white; font-size: 1.5rem; font-weight: 700;">TeoriTjek</h3>
+                    <p style="color: rgba(255,255,255,0.8); margin-top: 0.5rem;">Bestå første gang</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="floating-badge badge-friends">
+                <div class="badge-icon">👥</div>
+                <div class="badge-text">
+                  <div class="badge-label">Venner online</div>
+                  <div class="badge-value">12 aktive</div>
+                </div>
+              </div>
+              
+              <div class="floating-badge badge-score">
+                <div class="badge-text">
+                  <div class="badge-label">Din score</div>
+                  <div class="badge-value">92%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="features">
-        <div class="feature">
-          <span style="font-size: 2.5rem; margin-bottom: 1rem; display: block;">🧠</span>
-          <h3>Adaptiv Læringsteknologi</h3>
-          <p>Vores intelligente algoritme analyserer dine svar og tilpasser automatisk sværhedsgraden. Du får præcis den træning du behøver for at bestå.</p>
-        </div>
-        <div class="feature">
-          <span style="font-size: 2.5rem; margin-bottom: 1rem; display: block;">📊</span>
-          <h3>Detaljeret Progressionstracking</h3>
-          <p>Følg din udvikling i realtid. Se din gennemsnitsscore, antal tests og identificér præcis hvilke områder du skal fokusere på.</p>
-        </div>
-        <div class="feature">
-          <span style="font-size: 2.5rem; margin-bottom: 1rem; display: block;">💡</span>
-          <h3>Uddybende Forklaringer</h3>
-          <p>Lær af hver besvarelse med detaljerede forklaringer på alle spørgsmål. Forstå hvorfor svaret er rigtigt og undgå samme fejl igen.</p>
-        </div>
-      </div>
-
-      <section style="margin: 4rem 0;">
-        <h2 style="text-align: center; margin-bottom: 3rem;">Hvordan TeoriTjek Virker</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-          <div style="text-align: center;">
-            <div style="width: 60px; height: 60px; background: #0055ff; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold; font-size: 1.5rem;">1</div>
-            <h3 style="margin-bottom: 0.5rem;">Download Appen</h3>
-            <p style="color: #666; font-size: 0.95rem;">Hent TeoriTjek gratis fra App Store. Ingen kreditkort påkrævet.</p>
-          </div>
-          <div style="text-align: center;">
-            <div style="width: 60px; height: 60px; background: #0055ff; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold; font-size: 1.5rem;">2</div>
-            <h3 style="margin-bottom: 0.5rem;">Tag Prøvetest</h3>
-            <p style="color: #666; font-size: 0.95rem;">Start med 1 gratis komplet test for at teste appen uden tilmelding.</p>
-          </div>
-          <div style="text-align: center;">
-            <div style="width: 60px; height: 60px; background: #0055ff; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold; font-size: 1.5rem;">3</div>
-            <h3 style="margin-bottom: 0.5rem;">Opret Gratis Konto</h3>
-            <p style="color: #666; font-size: 0.95rem;">Tilmeld dig på få sekunder og få adgang til alle funktioner og spørgsmål.</p>
-          </div>
-        </div>
-      </section>
-
-      <div class="stats-section">
-        <h2>Version 2.0 Funktioner</h2>
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
         <div class="stats-grid">
-          <div class="stat">
-            <div class="stat-number">AI</div>
-            <div class="stat-label">Adaptiv læring</div>
+          <div class="stat-item">
+            <h3>50K+</h3>
+            <p>Aktive brugere</p>
           </div>
-          <div class="stat">
-            <div class="stat-number">25</div>
-            <div class="stat-label">Spørgsmål per test</div>
+          <div class="stat-item">
+            <h3>500+</h3>
+            <p>Opdaterede spørgsmål</p>
           </div>
-          <div class="stat">
-            <div class="stat-number">50%</div>
-            <div class="stat-label">Hurtigere performance</div>
+          <div class="stat-item">
+            <h3>92%</h3>
+            <p>Består første gang</p>
           </div>
-          <div class="stat">
-            <div class="stat-number">iOS 18</div>
-            <div class="stat-label">Optimeret til nyeste tech</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonials">
-        <h2 style="text-align: center; margin-bottom: 2rem;">Kommende Funktioner</h2>
-        <div class="feature-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-          <div class="upcoming-feature" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
-            <h4 style="color: #0066cc; margin-bottom: 0.5rem;">🏆 Leaderboards</h4>
-            <p style="font-size: 0.9rem; color: #666;">Konkurrer med venner og se hvem der scorer højest</p>
-          </div>
-          <div class="upcoming-feature" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
-            <h4 style="color: #0066cc; margin-bottom: 0.5rem;">⚔️ Battle Mode</h4>
-            <p style="font-size: 0.9rem; color: #666;">Udfordr andre brugere i realtids-dueller</p>
-          </div>
-          <div class="upcoming-feature" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);">
-            <h4 style="color: #0066cc; margin-bottom: 0.5rem;">🏅 Achievements</h4>
-            <p style="font-size: 0.9rem; color: #666;">Optjen badges og unlock særlige belønninger</p>
+          <div class="stat-item">
+            <h3>4.8★</h3>
+            <p>App Store rating</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="download-section">
-        <h2>Start Din Træning Nu</h2>
-        <p>Test appen først med 1 komplet prøve. Opret derefter gratis konto på få sekunder.</p>
-        <a href="https://apps.apple.com/dk/app/teoritjek-best%C3%A5-teoripr%C3%B8ven/id6744063979" class="secondary-cta" target="_blank" rel="noopener noreferrer">Prøv TeoriTjek 2.0</a>
-        <p style="font-size: 0.85rem; color: #666; margin-top: 1rem;">Finansieret via diskrete annoncer • Ingen skjulte gebyrer</p>
-        <p style="font-size: 0.85rem; margin-top: 0.5rem;"><a href="/privatlivspolitik.html" style="color: #0055ff;">Privatlivspolitik</a> • <a href="/handelsbetingelser.html" style="color: #0055ff;">Handelsbetingelser</a></p>
-      </div>
-
-      <section style="margin: 4rem 0; padding: 3rem 2rem; background: white; border-radius: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
-        <h2 style="text-align: center; margin-bottom: 2rem;">Alt om Teoriprøven i Danmark 2025</h2>
-        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; color: #333;">
-          <p><strong>Teoriprøven</strong> er det første store skridt mod dit kørekort. Fra februar 2024 er den digitale teoriprøve blevet indført i hele Danmark, hvilket gør prøven mere moderne og brugervenlig.</p>
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Alt hvad du behøver for at bestå</h2>
+          <p>TeoriTjek kombinerer den nyeste teknologi med bevist læringsteori</p>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🧠</div>
+            <h3>Adaptiv AI-læring</h3>
+            <p>Vores intelligente algoritme analyserer dine svar og tilpasser automatisk sværhedsgraden og spørgsmålstypen.</p>
+            <ul class="feature-list">
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Personlig læringssti
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Fokus på svage områder
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Spaced repetition
+              </li>
+            </ul>
+          </div>
           
-          <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Hvad koster teoriprøven i 2025?</h3>
-          <p>Gebyret for teoriprøven er 1.000 kr. hver gang du skal op. Derfor er det vigtigt at være godt forberedt - og det er her TeoriTjek kommer ind i billedet med vores gratis online teoriprøve.</p>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Detaljeret tracking</h3>
+            <p>Følg din udvikling i realtid med omfattende statistikker og visualiseringer af din fremgang.</p>
+            <ul class="feature-list">
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Kategori-opdeling
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Historisk udvikling
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Streak tracking
+              </li>
+            </ul>
+          </div>
           
-          <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Hvordan foregår teoriprøven?</h3>
-          <p>Den digitale teoriprøve består af 25 billeder med tilhørende spørgsmål. Du må maksimalt have 5 fejl for at bestå. Spørgsmålene dækker:</p>
-          <ul style="margin: 1rem 0; padding-left: 2rem;">
-            <li>Færdselsregler og vejskilte</li>
-            <li>Køretøjets indretning og betjening</li>
-            <li>Manøvrer og køreteknik</li>
-            <li>Risikoopfattelse og færdselssikkerhed</li>
-            <li>Miljøbevidst kørsel</li>
-          </ul>
-          
-          <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Forbered dig med TeoriTjek</h3>
-          <p>Med TeoriTjek's gratis teoriprøve online får du adgang til over 500 opdaterede spørgsmål, der følger Færdselsstyrelsens pensum. Vores adaptive AI-system sikrer, at du træner mest inden for de områder, hvor du har brug for det.</p>
+          <div class="feature-card">
+            <div class="feature-icon">💡</div>
+            <h3>Forklaringer & læring</h3>
+            <p>Lær af hver besvarelse med detaljerede forklaringer og visuelle hjælpemidler.</p>
+            <ul class="feature-list">
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Uddybende forklaringer
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Visuelle illustrationer
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Relaterede regler
+              </li>
+            </ul>
+          </div>
         </div>
-      </section>
-
-      <section style="margin: 4rem 0; background: white; padding: 3rem 2rem; border-radius: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
-        <h2 style="text-align: center; margin-bottom: 2rem;">Ofte Stillede Spørgsmål om Teoriprøven</h2>
-        <div style="max-width: 700px; margin: 0 auto;">
-          <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: #f8f9fb; border-radius: 12px; cursor: pointer;">
-            <summary style="font-weight: 600; font-size: 1.1rem;">Er TeoriTjek virkelig 100% gratis?</summary>
-            <p style="margin-top: 1rem; color: #666;">Ja, TeoriTjek er helt gratis at bruge. Vi finansierer appen gennem diskrete annoncer. Du kan øve dig med alle 500+ spørgsmål uden at betale noget som helst.</p>
-          </details>
-          <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: #f8f9fb; border-radius: 12px; cursor: pointer;">
-            <summary style="font-weight: 600; font-size: 1.1rem;">Hvordan virker den adaptive læring?</summary>
-            <p style="margin-top: 1rem; color: #666;">Vores AI-system analyserer dine svar og tilpasser automatisk sværhedsgraden. Du får flere spørgsmål inden for de områder, du finder svære, så du lærer hurtigere.</p>
-          </details>
-          <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: #f8f9fb; border-radius: 12px; cursor: pointer;">
-            <summary style="font-weight: 600; font-size: 1.1rem;">Er spørgsmålene som til den rigtige teoriprøve?</summary>
-            <p style="margin-top: 1rem; color: #666;">Ja, alle vores spørgsmål er baseret på Færdselsstyrelsens officielle pensum og opdateres løbende. Du øver dig med præcis de samme typer spørgsmål som til den rigtige prøve.</p>
-          </details>
-          <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: #f8f9fb; border-radius: 12px; cursor: pointer;">
-            <summary style="font-weight: 600; font-size: 1.1rem;">Hvor mange spørgsmål er der i hver test?</summary>
-            <p style="margin-top: 1rem; color: #666;">Hver test indeholder 25 spørgsmål - præcis som den rigtige teoriprøve. Du må max have 5 fejl for at bestå, lige som til den officielle prøve.</p>
-          </details>
-          <details style="margin-bottom: 1.5rem; padding: 1.5rem; background: #f8f9fb; border-radius: 12px; cursor: pointer;">
-            <summary style="font-weight: 600; font-size: 1.1rem;">Kan jeg bruge TeoriTjek på Android?</summary>
-            <p style="margin-top: 1rem; color: #666;">TeoriTjek er i øjeblikket kun tilgængelig på iOS (iPhone og iPad). Vi arbejder på en Android-version som forventes klar i 2025.</p>
-          </details>
+        
+        <!-- Progress Demo -->
+        <div class="progress-demo">
+          <div class="progress-header">
+            <h3>Din fremgang</h3>
+            <div class="progress-percentage">78%</div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <div class="progress-categories">
+            <div class="category-progress">
+              <span class="category-name">Færdselsregler</span>
+              <span class="category-score">85%</span>
+            </div>
+            <div class="category-progress">
+              <span class="category-name">Vejskilte</span>
+              <span class="category-score">92%</span>
+            </div>
+            <div class="category-progress">
+              <span class="category-name">Risikoopfattelse</span>
+              <span class="category-score">71%</span>
+            </div>
+            <div class="category-progress">
+              <span class="category-name">Manøvrer</span>
+              <span class="category-score">68%</span>
+            </div>
+          </div>
         </div>
-      </section>
-
-      <div class="footer">
-        <div class="footer-links">
-          <a href="/privatlivspolitik.html">Privatlivspolitik</a>
-          <a href="/handelsbetingelser.html">Handelsbetingelser</a>
-          <a href="mailto:support@teoritjek.dk">Kontakt</a>
-        </div>
-        <p>© 2025 TeoriTjek - Danmarks bedste gratis teoriprøve online.</p>
-        <p style="font-size: 0.8rem; color: #666; margin-top: 0.5rem;">TeoriTjek er ikke affilieret med Færdselsstyrelsen. Vores teoriprøver er baseret på officielt pensum.</p>
       </div>
-    </div>
+    </section>
+
+    <!-- Social Features Section -->
+    <section id="social" class="social-section">
+      <div class="container">
+        <div class="social-grid">
+          <div class="social-content">
+            <h3>Lær sammen med venner</h3>
+            <p style="font-size: 1.1rem; color: var(--gray-700); margin-bottom: 2rem;">TeoriTjek er ikke bare en app - det er et fællesskab. Tilføj venner, konkurrer på leaderboards og motivér hinanden til at bestå.</p>
+            
+            <div class="social-features">
+              <div class="social-feature">
+                <div class="social-icon">👥</div>
+                <div class="social-text">
+                  <h4>Vennersystem</h4>
+                  <p>Tilføj venner via unikke vennekoder og følg hinandens fremgang</p>
+                </div>
+              </div>
+              
+              <div class="social-feature">
+                <div class="social-icon">🏆</div>
+                <div class="social-text">
+                  <h4>Leaderboards</h4>
+                  <p>Se hvem der topper listen blandt dine venner og globalt</p>
+                </div>
+              </div>
+              
+              <div class="social-feature">
+                <div class="social-icon">⚔️</div>
+                <div class="social-text">
+                  <h4>Battle Mode</h4>
+                  <p>Udfordr venner til 1v1 dueller i realtid (kommer snart)</p>
+                </div>
+              </div>
+              
+              <div class="social-feature">
+                <div class="social-icon">📸</div>
+                <div class="social-text">
+                  <h4>Success Stories</h4>
+                  <p>Del din historie når du består og inspirer andre</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div style="background: white; padding: 2rem; border-radius: 1.5rem; box-shadow: var(--shadow-xl);">
+            <h4 style="text-align: center; margin-bottom: 2rem; color: var(--gray-900);">Venner Leaderboard</h4>
+            <div style="display: grid; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); border-radius: 0.75rem; color: white;">
+                <div style="font-size: 1.5rem; font-weight: 700;">1</div>
+                <div style="width: 40px; height: 40px; background: rgba(255,255,255,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center;">👑</div>
+                <div style="flex: 1;">
+                  <div style="font-weight: 600;">Emma J.</div>
+                  <div style="font-size: 0.875rem; opacity: 0.9;">2,450 point</div>
+                </div>
+              </div>
+              
+              <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--gray-100); border-radius: 0.75rem;">
+                <div style="font-size: 1.5rem; font-weight: 700; color: var(--gray-600);">2</div>
+                <div style="width: 40px; height: 40px; background: var(--gray-300); border-radius: 50%; display: flex; align-items: center; justify-content: center;">MK</div>
+                <div style="flex: 1;">
+                  <div style="font-weight: 600;">Mikkel K.</div>
+                  <div style="font-size: 0.875rem; color: var(--gray-600);">2,380 point</div>
+                </div>
+              </div>
+              
+              <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--gray-100); border-radius: 0.75rem;">
+                <div style="font-size: 1.5rem; font-weight: 700; color: var(--gray-600);">3</div>
+                <div style="width: 40px; height: 40px; background: var(--gray-300); border-radius: 50%; display: flex; align-items: center; justify-content: center;">SL</div>
+                <div style="flex: 1;">
+                  <div style="font-weight: 600;">Sophie L.</div>
+                  <div style="font-size: 0.875rem; color: var(--gray-600);">2,210 point</div>
+                </div>
+              </div>
+              
+              <div style="padding: 1rem; background: var(--primary); color: white; border-radius: 0.75rem; text-align: center; font-weight: 600;">
+                Din placering: #7 (1,890 point)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="how" class="how-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Sådan kommer du i gang</h2>
+          <p>Fra download til din første test på under 2 minutter</p>
+        </div>
+        
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Download appen</h3>
+            <p>Hent TeoriTjek gratis fra App Store. Ingen kreditkort eller binding.</p>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Prøv uden login</h3>
+            <p>Test appen med 1 komplet prøve helt uden at oprette en konto.</p>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Opret gratis profil</h3>
+            <p>Tilmeld dig på få sekunder og få adgang til alle funktioner og spørgsmål.</p>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3>Tilføj venner</h3>
+            <p>Del din vennekode og byg dit netværk for ekstra motivation.</p>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">5</div>
+            <h3>Start træningen</h3>
+            <p>Tag tests, følg din fremgang og klatr på leaderboards.</p>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">6</div>
+            <h3>Bestå prøven!</h3>
+            <p>Med TeoriTjek er du klar til at bestå første gang.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="stories-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Success Stories</h2>
+          <p>Se hvordan andre har bestået med TeoriTjek</p>
+        </div>
+        
+        <div class="stories-grid">
+          <div class="story-card">
+            <div class="story-image">
+              <div class="emoji">🎉</div>
+            </div>
+            <div class="story-content">
+              <div class="story-header">
+                <div class="story-avatar">LM</div>
+                <div class="story-meta">
+                  <h4>Laura M.</h4>
+                  <p>Bestået i går</p>
+                </div>
+              </div>
+              <p class="story-text">"TeoriTjek gjorde hele forskellen! Den adaptive læring sørgede for at jeg fik ekstra træning i de områder jeg var svag i. Bestod med kun 2 fejl!"</p>
+              <div class="story-stats">
+                <div class="story-stat">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                  124 likes
+                </div>
+                <div class="story-stat">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  3 ugers træning
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="story-card">
+            <div class="story-image">
+              <div class="emoji">🚗</div>
+            </div>
+            <div class="story-content">
+              <div class="story-header">
+                <div class="story-avatar">KJ</div>
+                <div class="story-meta">
+                  <h4>Kasper J.</h4>
+                  <p>Bestået for 3 dage siden</p>
+                </div>
+              </div>
+              <p class="story-text">"Vennersystemet var genial motivation! Min kæreste og jeg konkurrerede om at komme øverst på leaderboardet. Vi bestod begge to første gang!"</p>
+              <div class="story-stats">
+                <div class="story-stat">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                  89 likes
+                </div>
+                <div class="story-stat">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  5 ugers træning
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="story-card">
+            <div class="story-image">
+              <div class="emoji">🏆</div>
+            </div>
+            <div class="story-content">
+              <div class="story-header">
+                <div class="story-avatar">AN</div>
+                <div class="story-meta">
+                  <h4>Amanda N.</h4>
+                  <p>Bestået sidste uge</p>
+                </div>
+              </div>
+              <p class="story-text">"Efter at have dumpet 2 gange fandt jeg TeoriTjek. De detaljerede forklaringer gjorde at jeg endelig forstod reglerne. Tredje gang var lykkens gang!"</p>
+              <div class="story-stats">
+                <div class="story-stat">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                  156 likes
+                </div>
+                <div class="story-stat">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  4 ugers træning
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Ofte stillede spørgsmål</h2>
+          <p>Alt du har brug for at vide om TeoriTjek</p>
+        </div>
+        
+        <div class="faq-grid">
+          <details class="faq-item">
+            <summary class="faq-question">Er TeoriTjek virkelig 100% gratis?</summary>
+            <div class="faq-answer">
+              Ja, TeoriTjek er helt gratis at bruge. Vi finansierer appen gennem diskrete annoncer, så du kan øve dig med alle 500+ spørgsmål uden at betale noget som helst. Der er ingen skjulte gebyrer eller abonnementer.
+            </div>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="faq-question">Hvordan virker den adaptive AI-læring?</summary>
+            <div class="faq-answer">
+              Vores AI-system analyserer løbende dine svar og identificerer mønstre i dine styrker og svagheder. Baseret på denne analyse tilpasser systemet automatisk sværhedsgraden og fokuserer på de områder, hvor du har brug for mest træning. Det betyder, at du får en personlig læringsoplevelse, der maksimerer dine chancer for at bestå.
+            </div>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="faq-question">Er spørgsmålene som til den rigtige teoriprøve?</summary>
+            <div class="faq-answer">
+              Ja, alle vores spørgsmål er baseret på Færdselsstyrelsens officielle pensum og opdateres løbende. Du øver dig med præcis de samme typer spørgsmål som til den rigtige prøve, inklusiv billeder og situationer. Hver test består af 25 spørgsmål, og du må max have 5 fejl - præcis som til den officielle prøve.
+            </div>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="faq-question">Hvordan fungerer vennersystemet?</summary>
+            <div class="faq-answer">
+              Du kan tilføje venner ved at dele din unikke vennekode eller søge efter andre brugere. Når I er venner, kan I se hinandens fremgang på leaderboards, sammenligne statistikker og motivere hinanden. Du får også notifikationer når venner sender dig anmodninger eller opnår nye milepæle.
+            </div>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="faq-question">Hvad er success stories?</summary>
+            <div class="faq-answer">
+              Success stories er inspirerende historier fra brugere, der har bestået deres teoriprøve med hjælp fra TeoriTjek. Du kan dele din egen historie med billeder af dit nye kørekort og fortælle om din rejse. Andre brugere kan like og lade sig inspirere af din succes.
+            </div>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="faq-question">Kan jeg bruge TeoriTjek på Android?</summary>
+            <div class="faq-answer">
+              TeoriTjek er i øjeblikket kun tilgængelig på iOS (iPhone og iPad). Vi arbejder hårdt på en Android-version, som forventes klar i løbet af 2025. Tilmeld dig vores nyhedsbrev for at få besked, så snart Android-versionen er klar.
+            </div>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="faq-question">Hvordan tracker jeg min fremgang?</summary>
+            <div class="faq-answer">
+              TeoriTjek giver dig detaljeret indsigt i din læring gennem omfattende statistikker. Du kan se din overordnede succesrate, kategori-opdeling, historisk udvikling, streak tracking og meget mere. Alt præsenteres visuelt, så du nemt kan se, hvor du står, og hvad du skal fokusere på.
+            </div>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="faq-question">Hvad hvis jeg har tekniske problemer?</summary>
+            <div class="faq-answer">
+              Vi er her for at hjælpe! Du kan kontakte vores support team på support@teoritjek.dk, og vi svarer typisk inden for 24 timer. Du kan også finde svar på mange tekniske spørgsmål i app'ens hjælpesektion.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Klar til at bestå teoriprøven?</h2>
+        <p>Join tusindvis af danskere der allerede træner med TeoriTjek</p>
+        <a href="https://apps.apple.com/dk/app/teoritjek-best%C3%A5-teoripr%C3%B8ven/id6744063979" class="primary-cta" target="_blank" rel="noopener noreferrer">
+          Download gratis nu
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>TeoriTjek</h3>
+            <p>Danmarks mest populære teoriprøve-app. Hjælper dig med at bestå første gang gennem adaptiv læring og social motivation.</p>
+            <div class="footer-social">
+              <a href="#" class="social-link">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="/">Hjem</a></li>
+              <li><a href="/privatlivspolitik.html">Privatlivspolitik</a></li>
+              <li><a href="/handelsbetingelser.html">Handelsbetingelser</a></li>
+              <li><a href="mailto:support@teoritjek.dk">Kontakt</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links">
+            <h4>Download</h4>
+            <ul>
+              <li><a href="https://apps.apple.com/dk/app/teoritjek-best%C3%A5-teoripr%C3%B8ven/id6744063979" target="_blank" rel="noopener noreferrer">iOS App Store</a></li>
+              <li><a href="#" style="opacity: 0.5; cursor: not-allowed;">Android (Kommer snart)</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2025 TeoriTjek. Alle rettigheder forbeholdes.</p>
+          <p style="font-size: 0.875rem; margin-top: 0.5rem;">TeoriTjek er ikke affilieret med Færdselsstyrelsen.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
