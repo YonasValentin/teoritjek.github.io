@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sletning af data - TeoriTjek</title>
+    <meta name="description" content="Instruktioner for hvordan du sletter din TeoriTjek konto og dine personlige data." />
+    <link rel="canonical" href="https://www.teoritjek.dk/data-deletion.html" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+      
+      :root {
+        --primary: #3b82f6;
+        --primary-dark: #2563eb;
+        --primary-light: #60a5fa;
+        --secondary: #10b981;
+        --gray-50: #f9fafb;
+        --gray-100: #f3f4f6;
+        --gray-200: #e5e7eb;
+        --gray-300: #d1d5db;
+        --gray-400: #9ca3af;
+        --gray-500: #6b7280;
+        --gray-600: #4b5563;
+        --gray-700: #374151;
+        --gray-800: #1f2937;
+        --gray-900: #111827;
+        --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        line-height: 1.6;
+        background-color: var(--gray-50);
+        color: var(--gray-900);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      
+      /* Navigation */
+      nav {
+        background: white;
+        box-shadow: var(--shadow);
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      
+      nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+      }
+      
+      .logo {
+        font-weight: 800;
+        font-size: 1.5rem;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+      }
+      
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+      
+      .nav-links a {
+        color: var(--gray-600);
+        font-weight: 500;
+        transition: color 0.2s;
+        text-decoration: none;
+      }
+      
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+      
+      /* Main Content */
+      .main-content {
+        padding: 4rem 0;
+        min-height: calc(100vh - 200px);
+      }
+      
+      .content-card {
+        background: white;
+        border-radius: 1rem;
+        padding: 3rem;
+        box-shadow: var(--shadow-lg);
+      }
+      
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        color: var(--gray-900);
+      }
+      
+      .subtitle {
+        font-size: 1.25rem;
+        color: var(--gray-600);
+        margin-bottom: 3rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--gray-900);
+      }
+      
+      .deletion-methods {
+        background: var(--gray-50);
+        border-radius: 0.75rem;
+        padding: 2rem;
+        margin: 2rem 0;
+      }
+      
+      .method {
+        margin-bottom: 2rem;
+      }
+      
+      .method:last-child {
+        margin-bottom: 0;
+      }
+      
+      .method-title {
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+        color: var(--gray-900);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      
+      .method-icon {
+        width: 24px;
+        height: 24px;
+        background: var(--primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.875rem;
+      }
+      
+      ol {
+        margin-left: 2rem;
+        color: var(--gray-700);
+      }
+      
+      ol li {
+        margin-bottom: 0.5rem;
+        line-height: 1.8;
+      }
+      
+      .contact-info {
+        background: var(--primary-light);
+        background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        margin: 1rem 0;
+      }
+      
+      .contact-info p {
+        margin-bottom: 0.5rem;
+        color: var(--gray-700);
+      }
+      
+      .contact-info a {
+        color: var(--primary-dark);
+        font-weight: 600;
+        text-decoration: none;
+      }
+      
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+      
+      .data-list {
+        background: white;
+        border: 1px solid var(--gray-200);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        margin: 1rem 0;
+      }
+      
+      .data-list ul {
+        margin-left: 1.5rem;
+        color: var(--gray-700);
+      }
+      
+      .data-list li {
+        margin-bottom: 0.5rem;
+        list-style-type: disc;
+      }
+      
+      .warning-box {
+        background: #fef3c7;
+        border: 1px solid #fbbf24;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        display: flex;
+        gap: 1rem;
+      }
+      
+      .warning-icon {
+        color: #f59e0b;
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+      
+      .warning-content {
+        flex: 1;
+      }
+      
+      .warning-content p {
+        color: var(--gray-800);
+        margin: 0;
+      }
+      
+      /* Footer */
+      footer {
+        background: var(--gray-900);
+        color: white;
+        padding: 2rem 0;
+        margin-top: 4rem;
+      }
+      
+      .footer-content {
+        text-align: center;
+      }
+      
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+      
+      .footer-links a {
+        color: var(--gray-400);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      
+      .footer-links a:hover {
+        color: var(--primary-light);
+      }
+      
+      .footer-content p {
+        color: var(--gray-400);
+        font-size: 0.875rem;
+      }
+      
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        
+        h1 {
+          font-size: 2rem;
+        }
+        
+        .content-card {
+          padding: 2rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="container">
+        <a href="/" class="logo">TeoriTjek</a>
+        <div class="nav-links">
+          <a href="/">Hjem</a>
+          <a href="/privatlivspolitik.html">Privatlivspolitik</a>
+          <a href="/handelsbetingelser.html">Vilkår</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="container">
+        <div class="content-card">
+          <h1>Sletning af data</h1>
+          <p class="subtitle">Sådan sletter du din TeoriTjek konto og dine personlige data</p>
+
+          <p>Vi respekterer din ret til at slette dine personlige data. Her finder du instruktioner for, hvordan du kan anmode om sletning af din konto og alle tilknyttede data.</p>
+
+          <div class="deletion-methods">
+            <div class="method">
+              <div class="method-title">
+                <div class="method-icon">1</div>
+                Metode 1: Slet din konto direkte i appen
+              </div>
+              <ol>
+                <li>Log ind på din TeoriTjek konto i appen</li>
+                <li>Gå til din profil ved at trykke på profil-ikonet</li>
+                <li>Vælg "Indstillinger" eller "Kontoindstillinger"</li>
+                <li>Scroll ned og tryk på "Slet konto"</li>
+                <li>Bekræft din beslutning ved at følge bekræftelsestrinnene</li>
+              </ol>
+            </div>
+
+            <div class="method">
+              <div class="method-title">
+                <div class="method-icon">2</div>
+                Metode 2: Anmod om sletning via email
+              </div>
+              <div class="contact-info">
+                <p>Send en email til vores support team:</p>
+                <p>Email: <a href="mailto:support@teoritjek.dk">support@teoritjek.dk</a></p>
+                <p>Emne: Anmodning om sletning af konto</p>
+                <p>Inkluder venligst:</p>
+                <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                  <li>Den email-adresse, der er tilknyttet din konto</li>
+                  <li>Dit brugernavn (hvis du husker det)</li>
+                  <li>En bekræftelse på, at du ønsker at slette alle dine data</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <h2>Hvad sker der, når du sletter din konto?</h2>
+          <div class="data-list">
+            <p style="margin-bottom: 1rem;"><strong>Følgende data vil blive permanent slettet:</strong></p>
+            <ul>
+              <li>Dine profiloplysninger (navn, email, profilbillede)</li>
+              <li>Al din læringshistorik og fremgang</li>
+              <li>Dine testresultater og statistikker</li>
+              <li>Vennerelationer og vennekoder</li>
+              <li>Eventuelle success stories du har delt</li>
+              <li>Facebook eller Google login-oplysninger tilknyttet din konto</li>
+              <li>Alle andre personlige data gemt i vores system</li>
+            </ul>
+          </div>
+
+          <div class="warning-box">
+            <div class="warning-icon">⚠️</div>
+            <div class="warning-content">
+              <p><strong>Vigtigt:</strong> Sletning af din konto er permanent og kan ikke fortrydes. Al din fremgang og data vil gå tabt, og du vil ikke kunne gendanne din konto.</p>
+            </div>
+          </div>
+
+          <h2>Behandlingstid</h2>
+          <p>Vi behandler alle anmodninger om sletning inden for <strong>30 dage</strong>. Du vil modtage en bekræftelse via email, når din konto og data er blevet slettet.</p>
+
+          <h2>Data der bevares</h2>
+          <p>I overensstemmelse med dansk lovgivning kan vi være forpligtet til at bevare visse data i en begrænset periode, såsom:</p>
+          <ul style="margin-left: 2rem; margin-top: 0.5rem; color: var(--gray-700);">
+            <li>Transaktionsdata (hvis relevant) i henhold til bogføringsloven</li>
+            <li>Data nødvendige for at overholde juridiske forpligtelser</li>
+          </ul>
+
+          <h2>Har du spørgsmål?</h2>
+          <p>Hvis du har spørgsmål om sletning af data eller vores privatlivspolitik, er du velkommen til at kontakte os på <a href="mailto:support@teoritjek.dk" style="color: var(--primary-dark); font-weight: 600;">support@teoritjek.dk</a>.</p>
+
+          <p style="margin-top: 2rem;">Se også vores <a href="/privatlivspolitik.html" style="color: var(--primary-dark); font-weight: 600;">privatlivspolitik</a> for mere information om, hvordan vi behandler dine data.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="/">Hjem</a>
+            <a href="/privatlivspolitik.html">Privatlivspolitik</a>
+            <a href="/handelsbetingelser.html">Handelsbetingelser</a>
+            <a href="/data-deletion.html">Sletning af data</a>
+            <a href="mailto:support@teoritjek.dk">Kontakt</a>
+          </div>
+          <p>&copy; 2025 TeoriTjek. Alle rettigheder forbeholdes.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
